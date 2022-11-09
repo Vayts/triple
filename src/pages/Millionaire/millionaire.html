@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Millionaire</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="game">
+        <button class="game__button" id="startGame">Грати</button>
+        <div class="game__window" id="gameWindow">
+          <div class="game__host">
+            <img src="./public/img/frog.png" alt="Frog Host">
+            <div class="game__host-dialog">
+              <p class="game__host-text" id="hostText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloribus!</p>
+            </div>
+          </div>
+          <div class="game__process">
+            <div class="game__answers" id="gameAnswers">
+              <button value="0" class="game__answer-button"></button>
+              <button value="1" class="game__answer-button"></button>
+              <button value="2" class="game__answer-button"></button>
+              <button value="3" class="game__answer-button"></button>
+            </div>
+            <div class="game__restart" id="gameRestart">
+              <button class="game__restart-button game__restart-button_yes" id="resetGame">Так</button>
+              <a href='index.html' class="game__restart-button game__restart-button_no" id="leaveGame">Ні</a>
+            </div>
+          </div>
+          <div class="game__help-wrapper">
+            <div class="game__help" id="gameHelp">
+              <button class="game__help-button" id="friendCall">Дзвінок другу</button>
+              <button class="game__help-button" id="fiftyPercent">50 на 50</button>
+            </div>
+          </div>
+        </div>
+        <div class="game__progressbar" id="gameProgress">
+          <ul class="game__progressbar-list">
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">100&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">200&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">300&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">500&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">1000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">2000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">4000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">8000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">16000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">32000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">64000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">125000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">250000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">500000&#36;</p>
+            </li>
+            <li class="game__progressbar-item">
+              <span class="icon-step"></span>
+              <p class="game__progressbar-value">1000000&#36;</p>
+            </li>
+          </ul>
+        </div>
+        <div class="game__friend-wrapper" id="friend">
+          <div class="game__friend">
+            <img class="game__friend-img" src="./public/img/friend.gif" alt="Frog Friend">
+            <div class="game__friend-text">
+              <p id="friendText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloribus!</p>
+              <button class="game__friend-button" id="friendOkButton">Окей!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

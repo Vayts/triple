@@ -1,0 +1,256 @@
+@import "mixin";
+@import "default";
+@import "fonts";
+
+.game {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  &__button {
+    @include button;
+    align-self: center;
+  }
+
+  &__window {
+    display: none;
+  }
+
+  &__host {
+    display: flex;
+  }
+
+  &__host-dialog {
+    width: 550px;
+    height: 120px;
+    margin-left: 40px;
+    background-color: $green;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gold;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-align: center;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 30px 20px 0;
+      border-color: transparent $green transparent transparent;
+      position: absolute;
+      right: 100%;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__process {
+    width: 800px;
+    height: 220px;
+    min-height: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+  }
+
+  &__answers {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__answer-button {
+    @include button;
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+    font-size: 16px;
+    user-select: none;
+  }
+
+  &__restart {
+    height: 100%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__restart-button {
+    @include button;
+    flex-basis: 30%;
+    font-size: 20px;
+    user-select: none;
+    &_yes {
+      border-color: $green;
+      &:hover {
+        background-color: $green;
+        color: #fff;
+      }
+    }
+
+    &_no {
+      border-color: $red;
+      text-align: center;
+      text-decoration: none;
+      color: #000000;
+      &:hover {
+        background-color: $red;
+        color: #fff;
+      }
+    }
+  }
+
+  &__progressbar {
+    display: none;
+    margin: 0 30px;
+  }
+
+  &__progressbar-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+
+  &__progressbar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    &:nth-child(5), &:nth-child(10), &:nth-child(15) {
+      p {
+        font-size: 18px;
+      }
+      span {
+        width: 25px;
+        height: 25px;
+        &:before {
+          font-size: 25px;
+        }
+      }
+    }
+
+    &.active {
+      span {
+        &:before {
+          color: $gold;
+        }
+      }
+
+      p {
+        color: $gold;
+      }
+    }
+
+    span {
+      display: block;
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+      &:before {
+        font-size: 20px;
+        color: #838282;
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  &__help {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 100%;
+  }
+
+  &__help-wrapper {
+    height: 60px;
+    margin: 15px 0;
+  }
+
+  &__help-button {
+    @include button;
+    flex-basis: calc(35% - 10px);
+    font-size: 15px;
+  }
+
+  &__friend-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    &.active {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &__friend {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 20px;
+  }
+
+  &__friend-img {
+    height: 200px;
+  }
+
+  &__friend-text {
+    width: 400px;
+    margin: 0 0 40px 40px;
+    background-color: $gold;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    text-align: center;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 30px 20px 0;
+      border-color: transparent $gold transparent transparent;
+      position: absolute;
+      right: 100%;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__friend-button {
+    @include button;
+    border-color: $green;
+    background-color: $gold;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $green;
+    }
+  }
+
+}

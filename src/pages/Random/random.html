@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Frog Random</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="random">
+        <div class="random__title">
+          <img class="random__title-img" src="./public/img/friend.gif" alt="Frog Left">
+          <h2 class="random__title-text">Frog Random</h2>
+          <img class="random__title-img" src="./public/img/frog-right.gif" alt="Frog Right">
+        </div>
+        <div class="random__window">
+          <ul class="random__base-settings">
+            <li class="random__base-settings-item">
+              <label for="minValue">Від</label>
+              <input class="random__input" id="minValue" type="number" value="1">
+            </li>
+            <li class="random__base-settings-item">
+              <label for="countValue">Кількість</label>
+              <input class="random__input" id="countValue" type="number" min="1" value="1" max="10">
+            </li>
+            <li class="random__base-settings-item">
+              <label for="maxValue">До</label>
+              <input class="random__input" id="maxValue" type="number" value="100">
+            </li>
+          </ul>
+          <div class="random__result">
+            <p class="random__result-text" id="randomResult"></p>
+          </div>
+          <button class="random__button" id="randomize">Згенерувати</button>
+          <label class="random__unique">
+            <input type="checkbox" id="uniqueValue">
+            Унікально
+          </label>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

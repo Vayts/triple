@@ -1,0 +1,62 @@
+@import "mixin";
+@import "default";
+@import "fonts";
+@import "variables";
+
+.calculator {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &__window {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+    width: 400px;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  &__buttons {
+    width: 100%;
+    border-spacing: 10px;
+  }
+
+  &__button {
+    background-color: $gold;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    top: 0;
+    user-select: none;
+    cursor: pointer;
+
+    &_orange {
+      background-color: #ec7f32;
+      color: #fff;
+    }
+
+    &:active {
+      top: 2px;
+      transition: all 0.05s;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__result {
+    height: 60px;
+    margin: 10px;
+    color: #ffffff;
+    background-color: transparent;
+  }
+
+  &__result-text {
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: right;
+    font-family: 'Press Start 2P', cursive;
+  }
+}
